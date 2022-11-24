@@ -765,12 +765,12 @@ trigger1 = statetype = S
 trigger1 = ctrl
 trigger2 = stateno = 200
 trigger2 = time > 6
-
+trigger3 = stateno = 230
 ;---------------------------------------------------------------------------
 ;Stand Strong Punch
 [State -1, Stand Strong Punch]
 type = ChangeState
-value = 210
+value = 220
 triggerall = command = "y"
 triggerall = command != "holddown"
 trigger1 = statetype = S
