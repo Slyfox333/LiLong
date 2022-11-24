@@ -59,31 +59,31 @@
 ;--------------------------------------------------
 ; Jump start frame
 [Begin Action 040]
-0,0, 0,0, 1
+40,0, 0,0, 6
 
 ; Starting Jumping up
 [Begin Action 041]
-0,0, 0,0, 1
+43,1, 0,0, 10
 
 ; Starting Jumping forwards
 [Begin Action 042]
-0,0, 0,0, 1
+43,1, 0,0, 10
 
 ; Starting Jumping backwards
 [Begin Action 043]
-0,0, 0,0, 1
+43,0, 0,0, 10
 
 ; Peak and coming down from Jumping up
 [Begin Action 044]
-0,0, 0,0, 1
+43,1, 0,0, 10
 
 ; Peak and coming down from Jumping forwards
 [Begin Action 045]
-0,0, 0,0, 1
+43,1, 0,0, 10
 
 ; Peak and coming down from Jumping backwards
 [Begin Action 046]
-0,0, 0,0, 1
+43,0, 0,0, 10
 
 ; Jump land frame
 [Begin Action 047]
