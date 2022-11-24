@@ -155,7 +155,7 @@ value = 0
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-; Standing Light Punch
+; Slash
 ; CNS difficulty: easy
 [Statedef 200]
 type    = S				;State-type: S-stand, C-crouch, A-air, L-liedown
@@ -165,7 +165,7 @@ juggle  = 1				;Number of air juggle points move takes
 ;Commonly-used controllers:
 velset = 0,0			;Set velocity (x,y) (Def: no change)
 ctrl = 0				;Set ctrl (Def: no change)
-anim = 200				;Change animation (Def: no change)
+anim = 1				;Change animation (Def: no change)
 poweradd = 20			;Power to add (Def: 0)
 sprpriority = 2			;Set layering priority to 2 (in front)
 
