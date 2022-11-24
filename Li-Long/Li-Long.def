@@ -1,0 +1,19 @@
+[Info]
+name="Li-Long"
+displayname="Li-Long"
+versiondate=11/23/2022
+mugenversion=
+author="The Gremlins"
+pal.defaults=1,2,3,4,5
+[Files]
+sprite=Li-Long.sff
+sound=Li-Long.snd
+anim=Li-Long.air
+cmd=Li-Long.cmd
+cns=Li-Long.cns
+st=Li-Long.cns
+stcommon=common1.cns
+pal1=Li-Long.act
+[Arcade]
+intro.storyboard=
+ending.storyboard=
