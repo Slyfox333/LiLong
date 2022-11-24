@@ -737,7 +737,7 @@ trigger1 = Pos Y >= 0
 value = 5100 ;Hit ground
 
 ;==================================================================================
-;======| RELACIONADO À AI - AI RELATED |===========================================
+;======| RELACIONADO Ã€ AI - AI RELATED |===========================================
 ;==================================================================================
 
 ; (Credit to ANMC, Bagaliao, and FlowaGirl for the basic helper method concept.)
@@ -1073,7 +1073,7 @@ trigger3 = (RoundState != 2)
 [StateDef -2]
 
 ;==================================================================================
-;======| RELACIONADO À AI - AI RELATED |===========================================
+;======| RELACIONADO Ã€ AI - AI RELATED |===========================================
 ;==================================================================================
 
 ; Within StateDef -2, none of your own AI-related code should be placed
@@ -1114,7 +1114,7 @@ IgnoreHitPause = 1
 [Statedef -3]
 
 ;==================================================================================
-;======| RELACIONADO À AI - AI RELATED |===========================================
+;======| RELACIONADO Ã€ AI - AI RELATED |===========================================
 ;==================================================================================
 
 ; Kamek and Luchini appear to have been the first ones to use the IsHomeTeam AI activation concept.
