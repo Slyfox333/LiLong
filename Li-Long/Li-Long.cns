@@ -172,7 +172,7 @@ sprpriority = 2			;Set layering priority to 2 (in front)
 type = HitDef
 trigger1 = Time = 0
 attr = S, NA			;Attribute: Standing, Normal Attack
-damage = 50, 0			;Damage that move inflicts, guard damage
+damage = 50, 10			;Damage that move inflicts, guard damage
 animtype = Light			;Animation type: Light, Medium, Heavy, Back (def: Light)
 guardflag = MA			;Flags on how move is to be guarded against
 hitflag = MAF			;Flags of conditions that move can hit
@@ -242,7 +242,7 @@ anim = 220
 type = HitDef
 trigger1 = Time = 0
 attr = S, NA			;Attribute: Standing, Normal Attack
-damage = 100, 0			;Damage that move inflicts, guard damage
+damage = 100, 20			;Damage that move inflicts, guard damage
 animtype = Heavy			;Animation type: Light, Medium, Heavy, Back (def: Light)
 guardflag = MA			;Flags on how move is to be guarded against
 hitflag = MAF			;Flags of conditions that move can hit
@@ -293,7 +293,7 @@ anim = 230
 type = HitDef
 trigger1 = Time = 0
 attr = S, NA			;Attribute: Standing, Normal Attack
-damage = 70, 0			;Damage that move inflicts, guard damage
+damage = 70, 14			;Damage that move inflicts, guard damage
 animtype = Light			;Animation type: Light, Medium, Heavy, Back (def: Light)
 guardflag = MA			;Flags on how move is to be guarded against
 hitflag = MAF			;Flags of conditions that move can hit
