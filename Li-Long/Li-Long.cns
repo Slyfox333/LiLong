@@ -215,6 +215,7 @@ type    = S
 movetype= A
 physics = S
 juggle  = 4
+poweradd= 65
 ctrl = 0
 velset = 0,0
 anim = 210
@@ -334,6 +335,7 @@ type    = S
 movetype= A
 physics = S
 juggle  = 5
+poweradd= 65
 ctrl = 0
 velset = 0,0
 anim = 240
@@ -352,6 +354,7 @@ type    = S
 movetype= A
 physics = S
 juggle  = 5
+poweradd= 65
 ctrl = 0
 velset = 0,0
 anim = 250
@@ -436,11 +439,6 @@ air.velocity = -1.4,-3		;X-velocity at which opponent is pushed,
 				;Y-velocity at which opponent is pushed
 air.hittime = 12
 
-[State 200, 4]
-type = PowerAdd
-trigger1 = MoveHit
-value = 65
-
 [State 250, 5]
 type = ChangeState
 trigger1 = AnimTime = 0
@@ -516,6 +514,7 @@ type    = C
 movetype= A
 physics = C
 juggle  = 6
+poweradd= 50
 ctrl = 0
 anim = 410
 
@@ -595,6 +594,7 @@ type    = C
 movetype= A
 physics = C
 juggle  = 6
+poweradd= 50
 ctrl = 0
 anim = 420
 
@@ -669,6 +669,7 @@ type    = C
 movetype= A
 physics = C
 juggle  = 5
+poweradd= 22
 ctrl = 0
 anim = 440
 
@@ -724,14 +725,10 @@ ground.hittime  = 20		;Time opponent is in hit state
 ground.velocity = 1,-5		;Velocity at which opponent is pushed
 airguard.velocity = -1.9,-.8	          ;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
 air.type = High			;Type: High, Low, Trip (def: same as ground.type)
-air.velocity = -5,0		          ;X-velocity at which opponent is pushed,
+air.velocity = -5,0		;X-velocity at which opponent is pushed,
 				;Y-velocity at which opponent is pushed
 air.hittime = 20			;Time before opponent regains control in air
 
-[State 200, 2]
-type = PowerAdd
-trigger1 = MoveHit
-value = 30
 
 [State 440, 5]
 type = ChangeState
@@ -752,6 +749,7 @@ type    = C
 movetype= A
 physics = C
 juggle  = 7
+poweradd= 70
 ctrl = 0
 anim = 450
 
@@ -769,6 +767,7 @@ type    = A
 movetype= A
 physics = A
 juggle  = 2
+poweradd= 11
 ctrl = 0
 anim = 600
 
@@ -795,15 +794,9 @@ ground.hittime  = 14		;Time opponent is in hit state
 ground.velocity = -2		;Velocity at which opponent is pushed
 airguard.velocity = -1.9,-.8	          ;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
 air.type = High			;Type: High, Low, Trip (def: same as ground.type)
-air.velocity = -1.4,-3		;X-velocity at which opponent is pushed,
+air.velocity = -1.9,0		;X-velocity at which opponent is pushed,
 				;Y-velocity at which opponent is pushed
 air.hittime = 12			;Time before opponent regains control in air
-
-[State 200, 2]
-type = PowerAdd
-trigger1 = MoveHit
-value = 20
-
 
 [State 600, 5]
 type = CtrlSet
@@ -822,7 +815,7 @@ poweradd= 65
 ctrl = 0
 anim = 610
 
-[State 600, 1]
+[State 610, 1]
 type = HitDef
 trigger1 = Time = 0
 attr = A, NA			;Attribute: Standing, Normal Attack
@@ -849,11 +842,6 @@ air.velocity = -1.4,3		;X-velocity at which opponent is pushed,
 				;Y-velocity at which opponent is pushed
 air.hittime = 12			;Time before opponent regains control in air
 
-
-[State 200, 2]
-type = PowerAdd
-trigger1 = MoveHit
-value = 65
 
 [State 610, 5]
 type = CtrlSet
@@ -885,9 +873,35 @@ type    = A
 movetype= A
 physics = A
 juggle  = 3
-poweradd= 20
 ctrl = 0
 anim = 630
+
+[State 630, 1]
+type = HitDef
+trigger1 = Time = 0
+attr = A, NA			;Attribute: Standing, Normal Attack
+damage = 70, 14			;Damage that move inflicts, guard damage
+animtype = Light			;Animation type: Light, Medium, Heavy, Back (def: Light)
+guardflag = HA			;Flags on how move is to be guarded against
+hitflag = MAF			;Flags of conditions that move can hit
+priority = 3, Hit			;Attack priority: 0 (least) to 7 (most), 4 default
+				;Hit/Miss/Dodge type (Def: Hit)
+pausetime = 4, 4 			;Time attacker pauses, time opponent shakes
+sparkno = 0			;Spark anim no (Def: set above)
+sparkxy = -10, -76		          ;X-offset for the "hit spark" rel. to p2,
+				;Y-offset for the spark rel. to p1
+hitsound = 5, 0			;Sound to play on hit
+guardsound = 6, 0			;Sound to play on guard
+ground.type = High		          ;Type: High, Low, Trip (def: Normal)
+ground.slidetime = 3		;Time that the opponent slides back
+ground.hittime  = 14		;Time opponent is in hit state
+ground.velocity = -2		;Velocity at which opponent is pushed
+airguard.velocity = -1.9,-.8	          ;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
+air.type = High			;Type: High, Low, Trip (def: same as ground.type)
+air.velocity = -0.4,-3		;X-velocity at which opponent is pushed,
+				;Y-velocity at which opponent is pushed
+air.hittime = 12			;Time before opponent regains control in air
+
 
 [State 630, 5]
 type = CtrlSet
@@ -902,9 +916,36 @@ type    = A
 movetype= A
 physics = A
 juggle  = 4
-poweradd= 65
 ctrl = 0
 anim = 640
+
+[State 610, 1]
+type = HitDef
+trigger1 = Time = 0
+attr = A, NA			;Attribute: Standing, Normal Attack
+damage = 140, 28			;Damage that move inflicts, guard damage
+animtype = Light			;Animation type: Light, Medium, Heavy, Back (def: Light)
+guardflag = HA			;Flags on how move is to be guarded against
+hitflag = MAF			;Flags of conditions that move can hit
+priority = 3, Hit			;Attack priority: 0 (least) to 7 (most), 4 default
+fall = 1
+				;Hit/Miss/Dodge type (Def: Hit)
+pausetime = 4, 4 			;Time attacker pauses, time opponent shakes
+sparkno = 0			;Spark anim no (Def: set above)
+sparkxy = -10, -76		          ;X-offset for the "hit spark" rel. to p2,
+				;Y-offset for the spark rel. to p1
+hitsound = 5, 0			;Sound to play on hit
+guardsound = 6, 0			;Sound to play on guard
+ground.type = High		          ;Type: High, Low, Trip (def: Normal)
+ground.slidetime = 3		;Time that the opponent slides back
+ground.hittime  = 14		;Time opponent is in hit state
+ground.velocity = -2		;Velocity at which opponent is pushed
+airguard.velocity = -1.9,-.8	          ;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
+air.type = High			;Type: High, Low, Trip (def: same as ground.type)
+air.velocity = -1,6		;X-velocity at which opponent is pushed,
+				;Y-velocity at which opponent is pushed
+air.hittime = 12			;Time before opponent regains control in air
+
 
 [State 640, 5]
 type = CtrlSet
