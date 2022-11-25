@@ -215,7 +215,6 @@ type    = S
 movetype= A
 physics = S
 juggle  = 4
-poweradd= 65
 ctrl = 0
 velset = 0,0
 anim = 210
@@ -335,7 +334,6 @@ type    = S
 movetype= A
 physics = S
 juggle  = 5
-poweradd= 65
 ctrl = 0
 velset = 0,0
 anim = 240
@@ -354,7 +352,6 @@ type    = S
 movetype= A
 physics = S
 juggle  = 5
-poweradd= 65
 ctrl = 0
 velset = 0,0
 anim = 250
@@ -439,6 +436,11 @@ air.velocity = -1.4,-3		;X-velocity at which opponent is pushed,
 				;Y-velocity at which opponent is pushed
 air.hittime = 12
 
+[State 200, 4]
+type = PowerAdd
+trigger1 = MoveHit
+value = 65
+
 [State 250, 5]
 type = ChangeState
 trigger1 = AnimTime = 0
@@ -514,7 +516,6 @@ type    = C
 movetype= A
 physics = C
 juggle  = 6
-poweradd= 50
 ctrl = 0
 anim = 410
 
@@ -594,7 +595,6 @@ type    = C
 movetype= A
 physics = C
 juggle  = 6
-poweradd= 50
 ctrl = 0
 anim = 420
 
@@ -669,7 +669,6 @@ type    = C
 movetype= A
 physics = C
 juggle  = 5
-poweradd= 22
 ctrl = 0
 anim = 440
 
@@ -725,10 +724,14 @@ ground.hittime  = 20		;Time opponent is in hit state
 ground.velocity = 1,-5		;Velocity at which opponent is pushed
 airguard.velocity = -1.9,-.8	          ;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
 air.type = High			;Type: High, Low, Trip (def: same as ground.type)
-air.velocity = -5,0		;X-velocity at which opponent is pushed,
+air.velocity = -5,0		          ;X-velocity at which opponent is pushed,
 				;Y-velocity at which opponent is pushed
 air.hittime = 20			;Time before opponent regains control in air
 
+[State 200, 2]
+type = PowerAdd
+trigger1 = MoveHit
+value = 30
 
 [State 440, 5]
 type = ChangeState
@@ -749,7 +752,6 @@ type    = C
 movetype= A
 physics = C
 juggle  = 7
-poweradd= 70
 ctrl = 0
 anim = 450
 
@@ -767,7 +769,6 @@ type    = A
 movetype= A
 physics = A
 juggle  = 2
-poweradd= 11
 ctrl = 0
 anim = 600
 
@@ -797,6 +798,12 @@ air.type = High			;Type: High, Low, Trip (def: same as ground.type)
 air.velocity = -1.4,-3		;X-velocity at which opponent is pushed,
 				;Y-velocity at which opponent is pushed
 air.hittime = 12			;Time before opponent regains control in air
+
+[State 200, 2]
+type = PowerAdd
+trigger1 = MoveHit
+value = 20
+
 
 [State 600, 5]
 type = CtrlSet
@@ -842,6 +849,11 @@ air.velocity = -1.4,3		;X-velocity at which opponent is pushed,
 				;Y-velocity at which opponent is pushed
 air.hittime = 12			;Time before opponent regains control in air
 
+
+[State 200, 2]
+type = PowerAdd
+trigger1 = MoveHit
+value = 65
 
 [State 610, 5]
 type = CtrlSet
