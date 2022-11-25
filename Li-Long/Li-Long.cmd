@@ -794,7 +794,7 @@ trigger3 = (stateno = 230) && time > 9
 ;Standing Strong Kick
 [State -1, Standing Strong Kick]
 type = ChangeState
-value = 240
+value = 250
 triggerall = command = "b"
 triggerall = command != "holddown"
 trigger1 = statetype = S
